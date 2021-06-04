@@ -25,7 +25,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('productos.create');
     }
 
     /**
@@ -36,14 +36,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Producto::create($request->all());
+        return redirect()->route('productos.index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Producto  $producto
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responses
      */
     public function show(Producto $producto)
     {
