@@ -7,10 +7,14 @@
    <title>Productos</title>
 </head>
 <body>
+   {{-- loops through all the products in products table in DB  --}}
    @forelse ($productos as $producto)
        <div>
-          <h3>{{ $producto -> name }}</h3>
+          <h3>Producto: {{ $producto -> name }}</h3>
+          <p>Descripción: {{ $producto -> description }}</p>
+          <h4>Precio: ${{ $producto -> price}}</h4>
        </div>
+       <br>
    @empty
        <div class="null-database"><h3>No hay registros de productos en la base de datos</h3></div>
    @endforelse
