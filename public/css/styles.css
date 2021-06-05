@@ -1,0 +1,34 @@
+html, body{
+   padding: 0;
+   margin: 0;
+}
+
+h1{
+   padding: 1rem;
+   text-align: center;
+}
+
+.reg-prod{
+   font-size: 20px;
+   color: rgb(236, 148, 65);
+   text-align: left;
+}
+
+.form{
+   padding: 1rem;
+   text-align: center;
+}
+
+input{
+   padding: 0;
+   margin: 1rem;
+   background-color: palegreen;
+}
+
+p{
+   padding: 1rem;
+}
+
+.w-5{
+   display: none;
+}
