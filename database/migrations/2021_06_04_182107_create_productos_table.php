@@ -21,6 +21,7 @@ class CreateProductosTable extends Migration
             $table->date('expiration');
             $table->bigInteger('stock');
             $table->float('weightKg', 3, 2);
+            $table->string('imgLink', 500);
             $table->timestamps();
         });
     }
