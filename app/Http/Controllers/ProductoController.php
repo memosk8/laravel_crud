@@ -4,17 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductoController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * Display a listing of the products table on DB 
+     * paginating by 3
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $productos = Producto::all();
+    {   
+        $productos = DB::table('productos')->paginate(3);
         return view("productos.index", compact('productos'));
     }
 
