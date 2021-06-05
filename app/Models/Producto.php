@@ -15,6 +15,7 @@ class Producto extends Model
         'price',
         'expiration',
         'stock',
-        'weightKg'
+        'weightKg',
+        'imgLink'
     ];
 }
