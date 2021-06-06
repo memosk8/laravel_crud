@@ -17,7 +17,8 @@ class ProductoController extends Controller
     public function index()
     {   
         $productos = DB::table('productos')->paginate(3);
-        return view("productos.index", compact('productos'));
+        $count = DB::table('productos')->count();
+        return view("productos.index", compact('productos', 'count'));
     }
 
     /**
