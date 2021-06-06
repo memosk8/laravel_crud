@@ -3,42 +3,45 @@
 @section('title', 'Agregar Productos')
 
 @section('content')
-
-   
-
+   @section('sectionInNav')
+   <div>
+      <a href="#" class="head-item">Agregar producto</a>
+   </div>
+      
+   @endsection
    <form action="{{ route('productos.store')}}" method="POST">
-      <h1 class="form">Agregar producto</h1>
-      @csrf
 
-      <div>
+      @csrf  {{-- //token de seguridad --}}
+
+      <div class="mb-3">
          <label for="">Producto: </label>
-         <input type="text" name="name" id="name" required maxlength="100">
+         <input type="text"  class="form-control" name="name" id="name" required maxlength="100">
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">Descripción: </label>
-         <textarea name="description" id="" cols="30" rows="5"></textarea>
+         <textarea name="description"  class="form-control" id="" cols="30" rows="5"></textarea>
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">Precio: </label>
-         <input type="text" name="price" id="price" required maxlength="7">
+         <input type="text"  class="form-control" name="price" id="price" required maxlength="7">
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">Fecha de caducidad: </label>
-         <input type="date" name="expiration">
+         <input type="date"  class="form-control" name="expiration">
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">En stock: </label>
-         <input type="number" name="stock" id="" min="1" max="1000">
+         <input type="number"  class="form-control" name="stock" id="" min="1" max="1000">
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">Peso en Kg: </label>
-         <input type="text" name="weightKg" id="" required>
+         <input type="text" class="form-control" name="weightKg" id="" required>
       </div>
-      <div>
+      <div class="mb-3">
          <label for="">Link de imagen: </label>
-         <input type="text" name="imgLink" id="" >
+         <input type="text"  class="form-control" name="imgLink" id="" >
       </div>
-      <input type="submit" value="Guardar Producto">
+      <input type="submit" class="btn btn-secondary" value="Guardar Producto">
    </form>
 
 @endsection
