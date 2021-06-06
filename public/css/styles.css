@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+
 html, body{
    padding: 0;
-   margin: 0;
+   font-family: 'Nunito', sans-serif;
+}
+
+hr{
+   padding: 0;
+   margin: 0.4rem;
+   color: darkblue;
+   height:2px;border-width:0;color:gray;background-color:gray
 }
 
 h1{
@@ -8,27 +17,27 @@ h1{
    text-align: center;
 }
 
-.reg-prod{
-   font-size: 20px;
-   color: rgb(236, 148, 65);
-   text-align: left;
-}
-
-.form{
-   padding: 1rem;
-   text-align: center;
-}
-
-input{
-   padding: 0;
-   margin: 1rem;
-   background-color: palegreen;
-}
-
-p{
-   padding: 1rem;
+span.relative{
+   display: none;
 }
 
 .w-5{
    display: none;
+}
+
+.head-item{
+   font-size: 20px;
+   color: rgb(255, 255, 255);
+   text-align: left;
+   padding-right: 1rem;
+   padding-bottom: 1rem;
+   
+}
+
+.btn-secondary{
+   margin-bottom: 1rem;
+}
+
+.bottom-nav{
+   padding-top: 1rem;
 }
