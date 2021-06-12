@@ -5,9 +5,13 @@
 @section('content')
 
    @section('sectionInNav')
-      <div class="navbar navbar-light">
-               <p class="nav-link nav-item active" href="#">Productos Registrados : {{$count}}</p>
-               <p><a class="nav-link nav-item active" href="{{ route('productos.create') }}">Registrar Producto</a></p>
+      <div class="navbar nav">
+         <li class="nav-item">
+            <a class="nav-link nav-item active" href="#">Productos Registrados : {{$count}}</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link nav-item active" style="color: blue;" href="{{ route('productos.create') }}">Registrar Producto</a>
+         </li>
       </div>
    @endsection
 
@@ -17,7 +21,7 @@
    @forelse ($productos as $producto)
 
       <div class="col-sm-4 ">
-         <div class="card">
+         <div class="card bg-light border-dark" style="max-width: 24rem;">
                <img src="{{ $producto -> imgLink }}" class="card-img" alt="" width="50">
                <div class="card-body">
                   <h2 class="card-title"><em>{{ $producto -> name }}</em></h2>
@@ -30,8 +34,13 @@
                   <li class="list-group-item">Peso en Kg: {{$producto->weightKg}}</li>
                </ul>
                <div class="card-body">
-                  <a href="#" class="card-link">Ver mas</a>
-                  <a href="#" class="card-link">editar</a>
+                  <form action="{{ route('productos.destroy', $producto->id ) }}" method="post">
+                     <a href="#" class="card-link">Ver mas</a>
+                     <a href="{{ route('productos.edit', $producto->id ) }}" class="card-link">Editar</a>
+                     @csrf
+                     @method('DELETE')
+                     <button type="submit" class="btn btn-danger">Eliminar</button>
+                  </form>
                </div>
          </div>
       </div>   
@@ -41,8 +50,11 @@
    @endforelse
 </div>
 
-<div class="bottom-nav">
+<div >
+   <br>
    {{$productos->links()}}
+   <br>
 </div>
+
 @endsection
 

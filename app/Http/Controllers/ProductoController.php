@@ -62,7 +62,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('productos.edit', compact('producto'));
     }
 
     /**
@@ -72,9 +72,22 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Producto $producto)
-    {
-        //
+    public function update(Request $request, Producto $producto){
+        $request->validate(
+            [
+                'name' => 'required',
+                'description',
+                'price' => 'required',
+                'expiration' => 'required',
+                'stock' => 'required',
+                'weightKg' => 'required',
+                'imgLink' => ''
+            ]
+        );
+
+        $producto->update($request->all());
+
+        return redirect()->route('productos.index');
     }
 
     /**
@@ -85,6 +98,7 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        $producto->destroy($producto->id);
+        return redirect()->route('productos.index');
     }
 }

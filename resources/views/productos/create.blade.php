@@ -1,14 +1,18 @@
 @extends('layout.layout')
 
-@section('title', 'Agregar Productos')
+@section('title', 'Agregar Producto')
 
 @section('content')
+
    @section('sectionInNav')
-   <div>
-      <a href="#" class="head-item">Agregar producto</a>
-   </div>
-      
+      <div>
+         <li class="nav-link nav-item active">
+            <h4 >Agregar producto</h4>
+         </li>
+      </div>
    @endsection
+
+   <div class="jumbotron">
    <form action="{{ route('productos.store')}}" method="POST">
 
       @csrf  {{-- //token de seguridad --}}
@@ -43,5 +47,5 @@
       </div>
       <input type="submit" class="btn btn-secondary" value="Guardar Producto">
    </form>
-
+</div>
 @endsection

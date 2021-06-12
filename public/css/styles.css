@@ -17,6 +17,13 @@ h1{
    text-align: center;
 }
 
+a.relative{
+   margin-bottom: 2rem;
+}
+
+a{
+   color: red;
+}
 span.relative{
    display: none;
 }
