@@ -9,6 +9,7 @@
    <li>PHP >= 7.4 https://devdojo.com/tnylea/installing-php-on-windows </li>
    <li>composer https://getcomposer.org/ </li>
    <li>Mysql server https://www.sqlshack.com/how-to-install-mysql-database-server-8-0-19-on-windows-10/ </li>
+   <li>Code editor, I personally recommend VSCode because of the extensions</li>
 </ul>
 <h2> Or by simply installing XAMPP which already includes PHP, Apache server and Mysql</h2>
 <ul>
@@ -16,8 +17,8 @@
 </ul>
 <h1>Once the requirements are fullfilled, we can download or clone repository, install the project and run it</h1>
 <ol>
-   <li><p> First we need to change the <b>".env.example"</b> file name to just <b>".env"</b> and change de database connection parameters inside of it to your own db user and password if required</p></li>
-   <li> Download project folder OR clone using git bash </li>
+   <li> First Download project folder OR clone using git bash https://git-scm.com/downloads</li>
+   <li><p> Then we need to change the **".env.example"** file name to just <b>".env"</b> and change de database connection parameters inside of it to your own db user and password if required</p></li>
    <li> Once downloaded or cloned to your computer, access to project folder with the git bash cli (or cmd, powershell, whatever you use) and run the following commands: 
       <ul>
          <li><p> composer install  (this will install the packages specified in composer.json file, required by the project) </p></li>
