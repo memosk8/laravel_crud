@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 // had to specify the whole route for the controller 
 Route::resource('productos', 'App\Http\Controllers\ProductoController');
+Route::resource('ventas', 'App\Http\Controllers\ventaController');
