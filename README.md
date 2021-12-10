@@ -16,6 +16,7 @@
 </ul>
 <h1>Once the requirements are fullfilled, we can download or clone repository, install the project and run it</h1>
 <ol>
+   <li><p> First we need to change the <b>".env.example"</b> file name to just <b>".env"</b> and change de database connection parameters inside of it to your own db user and password if required</p></li>
    <li> Download project folder OR clone using git bash </li>
    <li> Once downloaded or cloned to your computer, access to project folder with the git bash cli (or cmd, powershell, whatever you use) and run the following commands: 
       <ul>
