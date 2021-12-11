@@ -16,9 +16,9 @@ class ProductoController extends Controller
      */
     public function index()
     {   
-        $productos = DB::table('productos')->paginate(3);
-        $count = DB::table('productos')->count();
-        return view("productos.index", compact('productos', 'count'));
+        $productos = DB::table('productos')->paginate(3); // esta función genera la paginación de 3 productos por vista
+        $count = DB::table('productos')->count(); // esta cuenta cuantos productos hay en la bd
+        return view("productos.index", compact('productos', 'count')); // se devuelve la vista productos/index.blade.php 
     }
 
     /**
