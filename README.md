@@ -1,62 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2><em> This was the first ever laravel project made by myself. It only features basic CRUD operations and some basic bootstrap classes for displaying and spacing the records in the database. </em></h2>
 
-## About Laravel
+<h1>Requirements to run this project</h1>
+<h3 align="center"> There are 2 ways of installing the required tools for this laravel project: </h3>
+<h2> By Installing the tools one by one </h2>
+<ul>
+   <li>PHP >= 7.4 https://devdojo.com/tnylea/installing-php-on-windows </li>
+   <li>composer https://getcomposer.org/ </li>
+   <li>Mysql server https://www.sqlshack.com/how-to-install-mysql-database-server-8-0-19-on-windows-10/ </li>
+   <li>Code editor, I personally recommend VSCode because of the extensions</li>
+</ul>
+<h2> Or by simply installing XAMPP which already includes PHP, Apache server and Mysql</h2>
+<ul>
+   <li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+</ul>
+<h1>Once the requirements are fullfilled, we can download or clone repository, install the project and run it</h1>
+<ol>
+   <li> First Download project folder OR clone using git bash https://git-scm.com/downloads</li>
+   <li><p> Then we need to change the <b>".env.example"</b> file name to just <b>".env"</b> and change de database connection parameters inside of it to your own db user and password if required</p></li>
+   <li> Once downloaded or cloned to your computer, access to project folder with the git bash cli (or cmd, powershell, whatever you use) and run the following commands: 
+      <ul>
+         <li><p><pre>composer install #this will install the packages specified in composer.json file, required by the project</pre></p></li>
+         <li><p><pre> composer update #check for new versions of those packages</pre></p></li>
+         <li><p><pre> php artisan serve #this will launch the laravel development server</p></pre></li>
+         <li><p> now simply navigate to the link provided by the server (localhost:8000/productos) and you should be able to see the project running </p></li>
+      </ul>
+   </li>
+</ol>
+<h1> Creating the database and setting up the tables (not using relations so far but i´m on it) </h1>
+<p> To set up our database and create the required columns we don´t have to write any sql statements. Laravel comes with a CLI (command line interface) that helps us build what we need without writting any php code or such.</p>
+<p> So, for adding columns to our actual database (which in this case is called <em>carnes</em> but we can change the name on the .env file), first we have to create it, so go ahead and create a new database called "carnes" so that we can run the project right away without modifying any of the actual code just to see it running.
+<p> Once the database is created and confirmed that the name on the <em>.env</em> file is the right one, we can go ahead and create the columns for it, which are the attributes we have already defined in class. As I said, laravel gives us a command line interface to interact with laravel and do so many things, called <em>Artisan</em> and executed by PHP.
+  <p>Go to your terminal and type <pre> php artisan migrate </pre> and check the database. If everything went OK, you should now see the columns into the database </p>
+  <p>Once we have the database ready, we can really test the CRUD operations on the db from laravel. So access localhost:8000/products/create and the form for adding new products to the db should display. Try adding values to it and save it, go to the database and check for that new record.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
