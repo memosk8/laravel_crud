@@ -20,3 +20,6 @@ Route::get('/', function () {
 // had to specify the whole route for the controller 
 Route::resource('productos', 'App\Http\Controllers\ProductoController');
 Route::resource('ventas', 'App\Http\Controllers\ventaController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
