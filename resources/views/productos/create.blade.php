@@ -13,7 +13,7 @@
    @endsection
 
    <div class="jumbotron">
-   <form action="{{ route('products.store')}}" method="POST">
+   <form action="{{ route('productos.store')}}" method="POST">
 
       @csrf  {{-- //token de seguridad --}}
 

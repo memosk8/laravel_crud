@@ -24,19 +24,19 @@
             <div class="card bg-light border-dark" style="max-width: 24rem;">
                 <img src="{{ $producto->imgLink }}" class="card-img" alt="" width="50">
                 <div class="card-body">
-                    <h2 class="card-title"><em>{{ $producto->name }}</em></h2>
-                    <p class="card-text">{{ $producto->description }}</p>
+                    <h2 class="card-title"><em>{{ $productos->name }}</em></h2>
+                    <p class="card-text">{{ $productos->description }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">${{ $producto->price }}</li>
-                    <li class="list-group-item">Stock en almacen: {{ $producto->stock }}</li>
-                    <li class="list-group-item">Fecha de caducidad: {{ $producto->expiration }}</li>
-                    <li class="list-group-item">Peso en Kg: {{ $producto->weightKg }}</li>
+                    <li class="list-group-item">${{ $productos->price }}</li>
+                    <li class="list-group-item">Stock en almacen: {{ $productos->stock }}</li>
+                    <li class="list-group-item">Fecha de caducidad: {{ $productos->expiration }}</li>
+                    <li class="list-group-item">Peso en Kg: {{ $productos->weightKg }}</li>
                 </ul>
                 <div class="card-body">
-                    <form action="{{ route('productos.destroy', $producto->id) }}" method="post">
+                    <form action="{{ route('productos.destroy', $productos->id) }}" method="post">
                         <a href="#" class="card-link">Ver mas</a>
-                        <a href="{{ route('productos.edit', $producto->id) }}" class="card-link">Editar</a>
+                        <a href="{{ route('productos.edit', $productos->id) }}" class="card-link">Editar</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Eliminar</button>
