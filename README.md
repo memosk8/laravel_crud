@@ -28,7 +28,7 @@
       </ul>
    </li>
 </ol>
-<h1> Creating the database and setting up the tables (not using relations so far but i´m on it) </h1>
+<h1> Creating the database and setting up the tables</h1>
 <p> To set up our database and create the required columns we don´t have to write any sql statements. Laravel comes with a CLI (command line interface) that helps us build what we need without writting any php code or such.</p>
 <p> So, for adding columns to our actual database (which in this case is called <em>carnes</em> but we can change the name on the .env file), first we have to create it, so go ahead and create a new database called "carnes" so that we can run the project right away without modifying any of the actual code just to see it running.
 <p> Once the database is created and confirmed that the name on the <em>.env</em> file is the right one, we can go ahead and create the columns for it, which are the attributes we have already defined in class. As I said, laravel gives us a command line interface to interact with laravel and do so many things, called <em>Artisan</em> and executed by PHP.
